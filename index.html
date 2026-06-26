@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Para ti 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Corazones flotantes de fondo -->
+  <div class="bg-hearts" id="bgHearts"></div>
+
+  <!-- ====================== PANTALLA 1: CANDADO ====================== -->
+  <section class="screen lock-screen" id="lockScreen">
+    <h1 class="lock-title">Ingresa la fecha correcta...</h1>
+
+    <div class="lock-wrap" id="lockWrap">
+      <div class="shackle"></div>
+      <div class="heart">
+        <div class="gloss"></div>
+        <div class="dials">
+          <div class="dial" data-unit="dia">
+            <button class="arrow up" aria-label="subir día">▲</button>
+            <div class="dial-value">01</div>
+            <button class="arrow down" aria-label="bajar día">▼</button>
+          </div>
+          <div class="dial" data-unit="mes">
+            <button class="arrow up" aria-label="subir mes">▲</button>
+            <div class="dial-value">01</div>
+            <button class="arrow down" aria-label="bajar mes">▼</button>
+          </div>
+          <div class="dial" data-unit="anio">
+            <button class="arrow up" aria-label="subir año">▲</button>
+            <div class="dial-value">20</div>
+            <button class="arrow down" aria-label="bajar año">▼</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint" id="hint">Pista: La fecha donde empezó nuestra historia</p>
+  </section>
+
+  <!-- ====================== CONTENIDO (oculto hasta abrir) ====================== -->
+  <main class="content" id="content">
+
+    <!-- Recuerdos -->
+    <section class="block">
+      <h2 class="big-title purple">Nuestra historia<span class="emoji">💖</span></h2>
+
+      <div class="card recuerdos">
+        <h3 class="card-title">Nuestros Recuerdos</h3>
+        <div class="coverflow" id="coverflow"></div>
+        <p class="floating-phrase" id="floatingPhrase">Tú haces mi mundo brillar</p>
+      </div>
+    </section>
+
+    <!-- Contador -->
+    <section class="block">
+      <h2 class="big-title pink">Nuestro Tiempo Juntos</h2>
+
+      <div class="counter-photo">
+        <img id="fotoContador" src="fotos/bby.jpeg" alt="Nosotros">
+      </div>
+
+      <div class="counter-card" id="counterCard">
+        <div class="counter-item"><span class="num" id="cAnios">0</span><span class="lbl">AÑOS</span></div>
+        <div class="counter-item"><span class="num" id="cMeses">3</span><span class="lbl">MESES</span></div>
+        <div class="counter-item"><span class="num" id="cDias">21</span><span class="lbl">DÍAS</span></div>
+        <div class="counter-item"><span class="num" id="cHoras">0</span><span class="lbl">HORAS</span></div>
+        <div class="counter-item"><span class="num" id="cMin">0</span><span class="lbl">MINUTOS</span></div>
+        <div class="counter-item"><span class="num" id="cSeg">0</span><span class="lbl">SEGUNDOS</span></div>
+      </div>
+    </section>
+
+    <!-- Carta -->
+    <section class="block carta-block">
+      <h2 class="big-title pink">Carta para mi bby love</h2>
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Abrir carta">
+        <div class="env-flap"></div>
+        <div class="env-body"></div>
+        <div class="env-heart">💗</div>
+      </div>
+      <p class="tap-hint">abre el sobre</p>
+    </section>
+
+    <footer class="foot">Hecho con amor 💗</footer>
+  </main>
+
+  <!-- ====================== MODAL CARTA ====================== -->
+  <div class="letter-overlay" id="letterOverlay">
+    <div class="letter">
+      <button class="letter-close" id="letterClose" aria-label="Cerrar">✕</button>
+      <span class="deco tl">💕</span>
+      <span class="deco br">💕</span>
+      <p class="letter-text" id="letterText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
